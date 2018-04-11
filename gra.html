@@ -10,7 +10,14 @@
 <link href="gra.css" type="text/css" rel="stylesheet">
 <script src="gra.js"></script>
 <script>
-    document.getElementById('app').appendChild(createTable());
+    var app=document.getElementById('app')
+    app.appendChild(createTable());
+    app.addEventListener('click' function (event) {
+        if (event.target.matches ('td')) {
+            event.target.style.backgroundColor='red'
+        }
+
+    })
 
 </script>
 
