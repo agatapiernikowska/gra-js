@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>gra</title>
+    <link href="gra.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
 <div id="app"></div>
-<link href="gra.css" type="text/css" rel="stylesheet">
 <script src="gra.js"></script>
 <script>
-    var app=document.getElementById('app')
+    var app=document.getElementById('app');
     app.appendChild(createTable());
-    app.addEventListener('click' function (event) {
+    app.addEventListener('click' , function (event) {
         if (event.target.matches ('td')) {
-            event.target.style.backgroundColor='red'
-        }
+            if (event.target.classList.contains('red')) {
+                event.target.classList.remove('red')
+            } else {
+                event.target.classList.add('red')
+
+            }
+            }
 
     })
 
