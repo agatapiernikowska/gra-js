@@ -15,3 +15,9 @@ function createTable (width, height) {
   table.appendChild(tbody);
   return table;
 }
+
+function colorize (table,x,y,color) {
+  var row = table.querySelector('tr:nth-child(' + (y+1) + ')');
+  var cell=row.querySelector('td:nth-child(' + (x + 1) + ')');
+  cell.style.backgroundColor = color
+}
