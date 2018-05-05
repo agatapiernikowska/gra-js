@@ -16,8 +16,13 @@ function createTable (width, height) {
   return table;
 }
 
-function colorize (table,x,y,color) {
+function getCell (table,x,y) {
   var row = table.querySelector('tr:nth-child(' + (y+1) + ')');
-  var cell=row.querySelector('td:nth-child(' + (x + 1) + ')');
-  cell.style.backgroundColor = color
+  return row.querySelector('td:nth-child(' + (x+1) + ')');
 }
+
+function colorize (node,color) {
+  node.style.backgroundColor = color
+}
+
+

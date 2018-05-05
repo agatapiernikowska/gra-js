@@ -1,7 +1,8 @@
 var mazeGame = (function() {
 var gameContainer = document.getElementById('game');
 var table =  createTable(10,10);
-colorize(table, 0, 0, 'red');
+var cell = getCell(table,0,0);
+colorize(cell, 'red');
 
 gameContainer.appendChild(table);
 })();
