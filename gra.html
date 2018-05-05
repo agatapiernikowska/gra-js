@@ -7,34 +7,10 @@
 
 </head>
 <body>
-<div id="app"></div>
+<div id="score"></div>
+<div id="game"></div>
+<script src=""utils.js></script>
 <script src="gra.js"></script>
-<script>
-    var app = document.getElementById('app');
-    app.appendChild(createTable());
-    app.addEventListener('click', function (event) {
-        if (event.target.matches('td')) {
-            if (event.target.classList.contains('red')) {
-                event.target.classList.remove('red')
-            } else {
-                event.target.classList.add('red')
-
-            }
-        }
-
-    });
-
-    setInterval(function () {
-        var cell = app.querySelector('td');
-        if (cell.classList.contains('red')) {
-            cell.classList.remove('red')
-        } else {
-            cell.classList.add('red')
-        }
-    }, 1000);
-
-
-</script>
 
 </body>
 </html>
